@@ -49,6 +49,11 @@ variable "logs_retention" {
   description = "Retention in days for CloudWatch Log Group"
 }
 
+variable "logs_kms_key_id" {
+  default     = null
+  description = "KMS key ID for CloudWatch Log Group"
+}
+
 variable "authentication_type" {
   default     = "certificate-authentication"
   description = "The type of client authentication to be used. Specify certificate-authentication to use certificate-based authentication, directory-service-authentication to use Active Directory authentication, or federated-authentication to use Federated Authentication via SAML 2.0."
@@ -96,4 +101,3 @@ variable "self_service_saml_provider_arn" {
   default     = null
   description = "(Optional) The ARN of the IAM SAML identity provider for portal if self portal is enabled."
 }
-
