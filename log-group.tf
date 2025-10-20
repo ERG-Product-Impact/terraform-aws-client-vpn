@@ -1,6 +1,7 @@
 resource "aws_cloudwatch_log_group" "vpn" {
   name              = "/aws/vpn/${var.name}/logs"
   retention_in_days = var.logs_retention
+  kms_key_id        = var.logs_kms_key_id
 
   tags = merge(
     var.tags,
